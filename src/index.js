@@ -13,9 +13,9 @@ import ReactDOM from 'react-dom';
 /*---------------------------
 | Components
 ---------------------------*/
-import Main from './React/Main.jsx';
+import CatAndDog from './React/CatAndDog.jsx';
 
 /*---------------------------
 | Render to DOM
 ---------------------------*/
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<CatAndDog />, document.getElementById('root'));
