@@ -1,25 +1,26 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
-const CatandDog = () => {
+const CatAndDog = () => {
 
-    const [imageSrc, imageSrcUpdate] = useState('/assets/img/cat.png');
+const [imageSrc, imageSrcUpdate] = useState('assets/img/cat.png');
 
-    const imageOver = () => {
-        imageSrcUpdate('/assets/img/dog.png');
-    }
-    const imageOut = () => {
-        imageSrcUpdate('assets/img/cat.png');
-    }
+const imageOver = () => {
+    imageSrcUpdate('assets/img/cat.png');
+}
+const imageOut = () => {
+    imageSrcUpdate('assets/img/dog.png');
+}
 
     return (
-        <div>Cat and Dog 
-            <img
-                scr={ imageSrc }
-                onMouseOver={ imageOver }
-                onMouseOut={ imageOut }
-            />
-        </div>    
+        <div>
+            Cat And Dog
+        <img 
+            src={ imageSrc } 
+            onMouseOver={ imageOver }
+            onMouseOut={ imageOut }
+            /> 
+        </div>
     )
 }
 
-export default CatandDog;
+export default CatAndDog;
