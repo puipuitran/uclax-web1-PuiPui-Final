@@ -13,9 +13,9 @@ import ReactDOM from 'react-dom';
 /*---------------------------
 | Components
 ---------------------------*/
-import CatAndDog from './React/CatAndDog.jsx';
+import Container from './React/Container.jsx';
 
 /*---------------------------
 | Render to DOM
 ---------------------------*/
-ReactDOM.render(<CatAndDog />, document.getElementById('root'));
+ReactDOM.render(<Container />, document.getElementById('root'));
