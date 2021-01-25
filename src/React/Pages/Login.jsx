@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CatAndDog = () => {
+const Login = () => {
 
 const [imageSrc, imageSrcUpdate] = useState('assets/img/cat.png');
 
@@ -12,16 +12,15 @@ const imageOut = () => {
 }
 
     return (
-        <div>
-            Cat And Dog
-        <img 
-            src={ imageSrc } 
-            alt='Cat And Dog'
-            onMouseOver={ imageOver }
-            onMouseOut={ imageOut }
+        <div><h1>Cat And Dog</h1>         
+            <img 
+                src={ imageSrc } 
+                alt='Cat And Dog'
+                onMouseOver={ imageOver }
+                onMouseOut={ imageOut }
             /> 
         </div>
     )
 }
 
-export default CatAndDog;
+export default Login;
