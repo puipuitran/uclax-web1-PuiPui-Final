@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
-const Login = () => {
+const CatAndDog = () => {
 
-const [imageSrc, imageSrcUpdate] = useState('assets/img/cat.png');
+    const [imageSrc, imageSrcUpdate] = useState('assets/img/cat.png');
 
 const imageOver = () => {
     imageSrcUpdate('assets/img/cat.png');
@@ -12,15 +13,20 @@ const imageOut = () => {
 }
 
     return (
-        <div><h1>Cat And Dog</h1>         
+        <CatAndDogStyled className='CatAndDog'>
+            <h2>Cat And Dog</h2> 
             <img 
                 src={ imageSrc } 
                 alt='Cat And Dog'
                 onMouseOver={ imageOver }
                 onMouseOut={ imageOut }
             /> 
-        </div>
-    )
+        </CatAndDogStyled>
+    );
 }
 
-export default Login;
+export default CatAndDog;
+
+const CatAndDogStyled = styled.div`
+
+`;
