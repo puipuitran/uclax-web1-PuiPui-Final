@@ -12,14 +12,14 @@ const Tabbed = () => {
 
     const [ chosenTab, chosenTabUpdates ] = useState(tabItems[1]);
 
-    const changeTabs = () => {
-        chosenTabUpdates(tabItems[2])
+    const changeTabs = (tabItem) => {
+        chosenTabUpdates(tabItem);
     }
 
 
     return (
         <TabbedStyled className='Tabbed'>
-            <TabbedNav changeTabs={ changeTabs }/>
+            <TabbedNav changeTabs={ changeTabs } tabItems={ tabItems } chosenTab={ chosenTab }/>
             <TabbedContent  chosenTab={ chosenTab } />
         </TabbedStyled>
     );
