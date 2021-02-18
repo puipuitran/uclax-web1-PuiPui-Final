@@ -40,7 +40,7 @@ const TabbedContentStyled = styled.div`
         flex: 4;
     }
 
-    @media ${mq.tablet} {
+    @media ${mq.desktop} {
         .right {
             padding: 0px 20px;
         }
