@@ -1,13 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+import Lightbox from '../../../Shared/Lightbox/Lightbox.jsx';
 
 const GalleryItem = ({ item }) => {
 
+    const [showLightbox, showLightboxUpdate] = useState(false);
+
+    const handleOnHide = () => {
+    console.log('Closing Lightbox');
+    showLightboxUpdate(false);
+    }
+
+    const handleOnShow = () => {
+        showLightboxUpdate(true);
+    }
+    
+
     return (
         <GalleryItemStyled className='GalleryItem'>
-            <img src={ item.image } alt={ item.title }/>
-            <h2>{ item.title }</h2>
-            <h3>{ item.category }</h3>
+            <div onClick={ handleOnShow }>
+                <img src={ item.image } alt={ item.title }/>
+                {/* <h2>{ item.title }</h2> */}
+                <h3>{ item.category }</h3>
+            </div>
+
+            <Lightbox 
+                show={ showLightbox }
+                onHide={ handleOnHide }
+            >
+                { item.title }  
+            </Lightbox>
+
         </GalleryItemStyled>
     );
 }

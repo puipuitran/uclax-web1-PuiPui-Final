@@ -8,7 +8,7 @@ import Gallery from './Gallery/Gallery.jsx';
 
 const Services = () => {
 
-    const [catChosen, catChosenUpdate] = useState('Massage');
+    const [catChosen, catChosenUpdate] = useState('All');
 
     console.log('catChosen', catChosen);
 
